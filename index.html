@@ -8,20 +8,16 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <div id="app">
-    <p>{{ message }}</p>
-    <p>{{number}}</p>
-    <p>{{ ok ? "Yes" : "No" }}</p>
-    <button v-on:click="reverseMessage">メッセージ反転</button>
+    <div>{{html}}</div>
+    <div v-html="html"></div>
     </div>
     <script>
         new Vue({
             el: '#app',
             data: {
-                message: 'HelloWorld',
-                number: 5,
-                ok: false
-            
+                html: '<h1>h1です</h1>'
             }
+            
         })
     </script>
 </body>
