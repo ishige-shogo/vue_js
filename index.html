@@ -8,14 +8,13 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <div id="app">
-    <div>{{html}}</div>
-    <div v-html="html"></div>
+    <a :href="url">Google</a>
     </div>
     <script>
         new Vue({
             el: '#app',
             data: {
-                html: '<h1>h1です</h1>'
+                url: 'https://google.com'
             }
             
         })
