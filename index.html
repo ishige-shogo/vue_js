@@ -12,22 +12,34 @@
     <div id="app">
         <p>現在{{ number }}回クリックされています</p>
         <button @click="countUp">カウントアップ</button> 
-        <p>{{numberEven}}</p> 
+        <p>現在{{ othernumber }}回クリックされています</p>
+        <button @click="othercountUp">カウントアップ</button> 
+        <p>{{numberEvenMethods()}}</p> 
+        <p>{{numberEvenComputed}}</p>
     </div>
 
     <script>
         new Vue({
             el: '#app',
             data: {
-                number: 0
+                number: 0,
+                othernumber: 0
             },
             methods: {
                 countUp: function(){
                     this.number += 1
+                },
+                othercountUp: function(){
+                    this.othernumber += 1
+                },
+                numberEvenMethods: function(){
+                    console.log("Methods")
+                    return this.number % 2 == 0 ? "偶数" : "奇数"
                 }
             },
             computed: {
-                numberEven: function(){
+                numberEvenComputed: function(){
+                    console.log("Computed")
                     return this.number % 2 == 0 ? "偶数" : "奇数"
                 }
             }
