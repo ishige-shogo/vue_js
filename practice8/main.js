@@ -20,7 +20,7 @@ new Vue({
 new Vue({
     el: '#app3',
     data: {
-        fruits: ["apple", "banana", "orange"],
+        fruits: ["apple", "banana", "orange"]
     },
     methods: {
         remove: function(){
