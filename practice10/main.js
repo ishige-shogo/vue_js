@@ -1,8 +1,13 @@
 var data = {
     message: "Hello", 
-    name: ""
+    name: "shige"
 }
 var vm = new Vue({
     el: '#app',
-    data: data
+    data: data,
+    computed: {
+        myData: function(){
+            return this.$data;
+        }
+    }
 })
