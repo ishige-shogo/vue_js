@@ -6,8 +6,12 @@
 <body>
 
 <div id="app">
-    <p>現在{{ number }}回クリックされています</p>
-    <button @click="countUp">カウントアップ</button>  
+    <template v-if="ok">
+        <p>Hello</p>
+        <p>Goodbye</p>
+        <p>super</p>
+    </template>
+    <button @click="ok = !ok">ボタン</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
