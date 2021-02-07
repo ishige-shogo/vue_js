@@ -8,4 +8,5 @@ new Vue({
             this.number += 1
         }
     } 
+    
 })
