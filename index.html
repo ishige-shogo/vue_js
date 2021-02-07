@@ -11,7 +11,8 @@
 
     <div id="app">
         <p>現在{{ number }}回クリックされています</p>
-        <button @click="countUp">カウントアップ</button>  
+        <button @click="countUp">カウントアップ</button> 
+        <p>{{numberEven}}</p> 
     </div>
 
     <script>
@@ -24,7 +25,13 @@
                 countUp: function(){
                     this.number += 1
                 }
-            } 
+            },
+            computed: {
+                numberEven: function(){
+                    return this.number % 2 == 0 ? "偶数" : "奇数"
+                }
+            }
+
         })
     </script>
 </body>
