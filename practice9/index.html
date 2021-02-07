@@ -5,13 +5,13 @@
 </head>
 <body>
 
-<div id="app">
-    <template v-if="ok">
-        <p>Hello</p>
-        <p>Goodbye</p>
-        <p>super</p>
-    </template>
-    <button @click="ok = !ok">ボタン</button>
+<div id="app1">
+    <p>{{ message }}</p>
+</div>
+
+<div id="app2">
+    <p>{{ message }}</p>
+    <button @click="changeMessage1">インスタンス１のメッセを変更</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
