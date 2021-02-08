@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 //ローカル登録
 import LikeHeader from './components/LikeHeader.vue';
 
