@@ -2,13 +2,12 @@
   <div>
     <LikeHeader></LikeHeader>
     <p>{{number}}</p>
-    <LikeNumber :totalNumber='number'></LikeNumber>
+    <LikeNumber></LikeNumber>
     <LikeNumber :total-number='number'></LikeNumber>
   </div>
 </template>
 
 <script>
-
 //ローカル登録
 import LikeHeader from './components/LikeHeader.vue';
 
