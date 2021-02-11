@@ -39,6 +39,15 @@
       >
       <label for="isPrivate">非公開</label>
       <p>{{eventData.isPrivate}}</p>
+      <p>参加条件</p>
+      <input type="checkbox" id="10" value="10代" v-model="eventData.target">
+      <label for="10">10代</label>
+      <input type="checkbox" id="20" value="20代" v-model="eventData.target">
+      <label for="20">20代</label>
+      <input type="checkbox" id="10" value="10代" v-model="eventData.target">
+      <label for="10">10代</label>
+      <input type="checkbox" id="10" value="10代" v-model="eventData.target">
+      <label for="10">10代</label>
     </div>
    </div>
 </template>
