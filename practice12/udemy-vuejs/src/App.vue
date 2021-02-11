@@ -8,13 +8,7 @@
     </div>
     <div>
       <h2>イベントのフォーム</h2>
-      <label for="title">タイトル</label>
-      <input 
-        id="title"
-        type="text"
-        v-model.lazy="eventData.title"
-      >
-      <pre>{{eventData.title}}</pre>
+      <EventTitle></EventTitle>
       <label for="maxNumber">最大人数</label>
       <input 
         id="maxNumber"
@@ -62,12 +56,14 @@
       <p>{{eventData.location}}</p>
 
     </div>
-   </div>
+  </div>
 </template>
 
 <script>
 //ローカル登録
 import LikeHeader from './components/LikeHeader.vue';
+import EventTitle from ",/components/EventTitle.vue";
+
 
 export default {
   data(){
@@ -87,7 +83,8 @@ export default {
     }
   },
   components: {
-    LikeHeader
+    LikeHeader,
+    EventTitle
   },
   methods: {
     incrementNumber (value){
