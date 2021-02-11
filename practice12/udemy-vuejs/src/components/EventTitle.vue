@@ -2,10 +2,17 @@
     <div>
         <label for="title">タイトル</label>
         <input 
-        id="title"
-        type="text"
-        v-model.lazy="eventData.title"
+            id="title"
+            type="text"
+            :value="value"
+            @input="$emit("input", $event.target.value)"
         >
-        <pre>{{eventData.title}}</pre>
+        <pre>{{ value }}</pre>
     </div>
 </template>
+
+<script>
+    export default{
+        props: ["value"]
+    };
+</script>

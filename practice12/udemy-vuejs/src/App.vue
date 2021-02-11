@@ -8,7 +8,7 @@
     </div>
     <div>
       <h2>イベントのフォーム</h2>
-      <EventTitle></EventTitle>
+      <EventTitle v-model="eventData.title"></EventTitle>
       <label for="maxNumber">最大人数</label>
       <input 
         id="maxNumber"
