@@ -1,10 +1,20 @@
 <template>
   <div>
-    <LikeHeader></LikeHeader>
-    <p>{{number}}</p>
-    <LikeNumber :total-number='number' @my-click="incrementNumber"></LikeNumber>
-    <LikeNumber :total-number='number'></LikeNumber>
-  </div>
+    <div>
+      <LikeHeader></LikeHeader>
+      <p>{{number}}</p>
+      <LikeNumber :total-number='number' @my-click="incrementNumber"></LikeNumber>
+      <LikeNumber :total-number='number'></LikeNumber>
+    </div>
+    <div>
+      <h2>イベントのフォーム</h2>
+      <label for="title">タイトル</label>
+      <input 
+        id="title"
+        type="text"
+      >
+    </div>
+   </div>
 </template>
 
 <script>
