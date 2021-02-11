@@ -44,10 +44,23 @@
       <label for="10">10代</label>
       <input type="checkbox" id="20" value="20代" v-model="eventData.target">
       <label for="20">20代</label>
-      <input type="checkbox" id="10" value="10代" v-model="eventData.target">
-      <label for="10">10代</label>
-      <input type="checkbox" id="10" value="10代" v-model="eventData.target">
-      <label for="10">10代</label>
+      <input type="checkbox" id="30" value="30代" v-model="eventData.target">
+      <label for="30">30代</label>
+      <p>{{eventData.target}}</p>
+      <p>参加費</p>
+      <input type="radio" id="free" value="無料" v-model="eventData.price">
+      <label for="free">無料</label>
+      <input type="radio" id="paid" value="有料" v-model="eventData.price">
+      <label for="paid">有料</label>
+
+      <p>開催場所</p>
+      <select v-model="eventData.location">
+        <option v-for="location in locations" :key="location">
+          {{location}}
+        </option>
+      </select>
+      <p>{{eventData.location}}</p>
+
     </div>
    </div>
 </template>
@@ -60,12 +73,16 @@ export default {
   data(){
     return {
       number: 14,
+      locations: ["東京", "大阪", "名古屋"],
       eventData: {
         title: "",
         maxNumber: 0,
         host: "",
         detail: "",
-        isPrivate: false
+        isPrivate: false,
+        target: [],
+        price: "無料",
+        location: "東京"
       }
     }
   },
