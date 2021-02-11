@@ -62,7 +62,7 @@
 <script>
 //ローカル登録
 import LikeHeader from './components/LikeHeader.vue';
-import EventTitle from ",/components/EventTitle.vue";
+import EventTitle from './components/EventTitle.vue';
 
 
 export default {
