@@ -7,6 +7,9 @@
       <LikeNumber :total-number='number'></LikeNumber>
     </div>
     <div>
+      <Home></Home>
+    </div>
+    <div>
       <h2>イベントのフォーム</h2>
       <EventTitle v-model="eventData.title"></EventTitle>
       <label for="maxNumber">最大人数</label>
@@ -63,6 +66,8 @@
 //ローカル登録
 import LikeHeader from './components/LikeHeader.vue';
 import EventTitle from './components/EventTitle.vue';
+import Home from './components/Home.vue';
+
 
 
 export default {
@@ -84,7 +89,8 @@ export default {
   },
   components: {
     LikeHeader,
-    EventTitle
+    EventTitle,
+    Home
   },
   methods: {
     incrementNumber (value){
