@@ -1,8 +1,17 @@
 <template>
   <div class="main">
     <button @click="show = !show">切替</button>
-    <transition name="fade">
+    <transition
+      enter-active-class="animate_animated animate_bounce"
+      leave-active-class="animate_animated animate_shake"
+      appear>
       <p v-if="show">hello</p>
+    </transition>
+    <transition 
+      :name="slide"
+      type="animation"
+      appear>
+      <p v-if="show">bye</p>
     </transition>
   </div>
 </template>
@@ -19,22 +28,44 @@ export default {
 
 <style scoped>
 .fade-enter{
-
+  opacity: 0;
 }
 .fade-enter-active{
-
+  transition: opacity 0.5s;
 }
 .fade-enter-to{
-
+  opacity: 1;
 }
 .fade-leave{
-
+  opacity: 1;
 }
 .fade-leave-active{
-
+  transition: opacity 0.5s;
 }
 .fade-leave-to{
-  
+  opacity: 0;
+}
+
+.slide-enter,
+.slide-leave-to{
+  opacity: 0;
+}
+.slide-enter-active{
+  animation: slide-in 0.5s;
+  transition: opacity 1s;
+}
+.slide-leave-active{
+  animation: slide-in 0.5s reverse;
+  transition: opacity 1s;
+}
+
+@keyframes slide-in{
+  from{
+    transform: translateX(100px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 
 .main{
